@@ -1,7 +1,8 @@
 
+from tqdm import tqdm 
 
 
-def train_loop():
+def train_loop(train_loader, model, criterion, optimizer, N_EPOCHS, device):
     for  epoch in tqdm(range(N_EPOCHS),  desc="Training"):
         train_loss = 0.0
         for batch in tqdm(train_loader, desc=f"Epoch {epoch+1}", leave=False):

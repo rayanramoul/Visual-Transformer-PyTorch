@@ -1,3 +1,8 @@
+from torch.utils.data import DataLoader
+
+from torchvision.transforms  import ToTensor
+from torchvision.datasets import MNIST
+
 def read_dataset():
     transform = ToTensor() 
     train_set = MNIST(root='./data', train=True, download=True, transform=transform)
